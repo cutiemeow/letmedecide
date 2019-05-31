@@ -1,21 +1,25 @@
 import React , {Component} from 'react';
-import FitText from '@kennethormandy/react-fittext'
 import "./style.scss";
+import { Textfit } from 'react-textfit';
+import CloseButton from '../CloseButton/'
+
 
 
 
 export default function(props){
-    return(
-        <div className='tag'>
-            <FitText vertical compressor={0.4} minFontSize={9} maxFontSize={20}>
-                <p>{props.text}</p>
-                 
-            </FitText>
-            
-        </div>
 
-        
-            
-        
+    const {removeTag,text,index} = props;
+    
+ 
+    return(
+        <Textfit mode="multi" 
+                 forceSingleModeWidth = {true} 
+                 max={100} min ={1} 
+                 throttle={50}  
+                 className="textFit" >
+                <CloseButton removeTag = {removeTag} text = {text} ></CloseButton>
+                {text}
+        </Textfit>
     );
+
 }
