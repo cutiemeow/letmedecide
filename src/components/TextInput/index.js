@@ -31,7 +31,7 @@ export default class TextInput extends Component{
         return(
                 <form className='form-input'>
                     <div className="input-group">
-                        <div class="input-group-prepend">
+                        <div className="input-group-prepend">
                             <input className='form-control '
                                     type="text" 
                                     value={this.state.value} 
