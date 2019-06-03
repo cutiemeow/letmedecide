@@ -11,20 +11,18 @@ import antman from './img/ant_man.png'
 import blackpanner from './img/black_panner.png'
 import captain from './img/captain.png'
 import ironman from './img/ironman.png'
-import thor from './img/thor.png'
 import vission from './img/vission.png'
+
 
 
 
 class App extends Component {
   constructor(props){
     super(props);
-    this.listTag = ["hihi",
-                    "hiep",
-                    "lan",
-                    "tom hum chien xu",
-                    "rau muon xao toi tuong ot",
-                    "rau muon xao toi tuong ot rau muon xao toi tuong ot tom hum chien xu",];
+    this.listTag = ["work hard",
+                    "quit work",
+                    "whatever",
+                    ];
 
   }
 
@@ -69,10 +67,19 @@ class App extends Component {
             <div className='col-sm-2 col-md-2 col-lg-2 ' > 
                 <MediaQuery query="(max-device-width: 1224px)">
                   {/* //for mobile */}
-                  <img className='img-thanos-mobile img-circle' src={thanos} />
-                  <a className='btn-snap-moblie' onClick={this.onClickSnap}  src ={snap}>
-                        <img className='img-snap' src={snap}  width="100px" height="100px"  />
-                  </a>
+                  <div className='div-avenger-mobile'>
+                      <img className='avenger-mobile img-thanos-mobile img-circle' src={thanos} />
+                      <a className='btn-snap-moblie' onClick={this.onClickSnap}  src ={snap}>
+                            <img className='img-snap' src={snap}  width="100px" height="100px"  />
+                      </a>
+                      <img className='avenger-mobile captain-mobile' src={captain} width="75px" height="100px" ></img>
+                      <img className='avenger-mobile ironman-mobile' src={ironman} width="75px" height="100px" ></img>
+                      <img className='avenger-mobile vission-mobile' src={vission} width="75px" height="100px" ></img>
+                      <img className='avenger-mobile hulk-mobile' src={hulk} width="75px" height="100px" ></img>
+                      <img className='avenger-mobile antman-mobile' src={antman} width="75px" height="100px" ></img>
+                      <img className='avenger-mobile blackpanner-mobile ' src={blackpanner} width="75px" height="100px" ></img>
+                  </div>
+                  
                 </MediaQuery>
                 <MediaQuery query="(min-device-width: 1224px)">
                 
@@ -116,7 +123,10 @@ class App extends Component {
             <div className='col-sm-2 col-md-2 col-lg-2 col-right' >
                 <MediaQuery query="(max-device-width: 1224px)">
                     {/* //for mobile */}
-                    <div></div>
+                    <div className="footer-mobile">
+                        <p> <i class="fa fa-github"></i> Author <a href="https://github.com/cutiemeow/what_to_eat">phungdaihiep</a></p>
+                    </div>
+                    
                    
                 </MediaQuery>
                 <MediaQuery query="(min-device-width: 1224px)">
@@ -127,12 +137,9 @@ class App extends Component {
                       <img className='avenger hulk' src={hulk} width="135px" height="180px" ></img>
                       <img className='avenger antman' src={antman} width="112px" height="150px" ></img>
                       <img className='avenger blackpanner ' src={blackpanner} width="112px" height="150px" ></img>
-                      
-                      
-                      
-                      
-                      
-
+                      <div className="footer">
+                        <p> <i class="fa fa-github"></i> Author <a href="https://github.com/cutiemeow/what_to_eat">phungdaihiep</a></p>
+                      </div>
                 </MediaQuery>
                 <p>
                   

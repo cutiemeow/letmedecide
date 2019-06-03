@@ -16,7 +16,11 @@ export default class TextInput extends Component{
         //event
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        
     }
+    componentDidMount(){
+        this.nameInput.focus(); 
+     }
 
     handleChange(event){
         this.setState({value : event.target.value});
@@ -32,9 +36,10 @@ export default class TextInput extends Component{
                 <form className='form-input'>
                     <div className="input-group">
                         <div className="input-group-prepend">
-                            <input className='form-control '
+                            <input className='form-control'
                                     type="text" 
-                                    value={this.state.value} 
+                                    value={this.state.value}
+                                    ref={(input) => { this.nameInput = input; }} 
                                     onChange={this.handleChange}
                                     onKeyPress={e => {
                                         if (e.key === 'Enter') {
